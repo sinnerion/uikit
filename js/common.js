@@ -32,7 +32,7 @@ $(document).ready(function () {
     var currentScroll = $(this).scrollTop();
     if ($(window).width() < 768) {
       if (currentScroll > previousScroll) {
-        $('.main-sidebar_nav').css('top', '-90px');
+        $('.main-sidebar_nav').css('top', '-160px');
       } else {
         $('.main-sidebar_nav').css('top', '60px');
       }
