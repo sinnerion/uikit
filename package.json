@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "normalize.css": "^5.0.0"
+    "normalize.css": "^5.0.0",
+    "uikit": "^2.27.2"
   },
   "devDependencies": {
-    "uikit": "^2.27.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -4,6 +4,14 @@
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
+  .main-header {
+    .heaer-login_nav {
+      font-size: 12px;
+    }
+    .header-nav {
+      width: 27%;
+    }
+  }
   .main-sidebar {
     width: 100px;
     &_more {
@@ -31,6 +39,9 @@ and (max-device-width : 480px) {
     }
   }
   .content-block {
-    padding-left: 225px;
+    padding-left: 125px;
+    p {
+      font-size: 12px;
+    }
   }
 }
