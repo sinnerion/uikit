@@ -1,7 +1,161 @@
 @import "vars";
 
 /* General */
+html,
+body {
+  position: relative;
+  height: 100%;
+}
 
+/* Header */
+.main-header {
+  z-index: 30;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 0;
+  line-height: 40px;
+  background: darken($main-bg, 10%);
+  .main-nav {
+    background: transparent;
+    a {
+      color: $main-txt;
+    }
+  }
+  .main-logo {
+    display: block;
+  }
+  .header-login {
+    cursor: pointer;
+    width: 60px;
+    border-radius: 50%;
+    img {
+      border-radius: 50%;
+    }
+  }
+  .header-nav {
+    position: absolute;
+    right: 0px;
+    top: 70px;
+    width: 20%;
+    background: darken($main-bg, 10%);
+    a {
+      padding: 10px 15px;
+      color: $main-txt;
+      &:hover {
+        background: lighten($main-bg, 2%);
+      }
+    }
+  }
+}
+
+/* Content */
+.content {
+  background: $main-bg;
+  margin-top: 70px;
+  padding-top: 20px;
+  &-block {
+    padding-left: 160px;
+  }
+}
+
+
+/* Sidebar */
+.main-sidebar {
+  z-index: 20;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  height: 100%;
+  position: fixed;
+  width: 50px;
+  top: 70px;
+  left: 0;
+  background: darken($main-bg, 10%);
+  &.active-sidebar {
+    width: 230px;
+    .main-sidebar_counter {
+      margin-left: 25px;
+    }
+  }
+  .uk-panel {
+    height: 100%;
+  }
+  &_more {
+    background: transparent;
+    color: $main-txt;
+    padding: 0;
+    width: 100%;
+    &:hover,
+    &:focus,
+    &:active {
+      background: darken($main-bg, 12%);
+      color: $main-txt;
+    }
+  }
+  &_nav {
+    position: absolute;
+  }
+  &_nav > li {
+    background: darken($main-bg, 10%);
+    width: 50px;
+    overflow: hidden;
+    -webkit-transition: width .3s;
+    -moz-transition: width .3s;
+    -ms-transition: width .3s;
+    -o-transition: width .3s;
+    transition: width .3s;
+    &.active-sidebar {
+      width: 230px;
+    }
+    &:hover {
+      width: 230px;
+    }
+  }
+  &_nav > li > a {
+    width: 230px;
+    padding: 0;
+    border-top: 1px solid darken($main-bg, 20%);
+    .link-body {
+      padding: 10px;
+      font-size: 0;
+      &_description {
+        display: inline-block;
+        font-size: 12px;
+        vertical-align: middle;
+      }
+    }
+    img {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      margin-right: 20px;
+      font-size: 1px;
+      vertical-align: middle;
+      border-radius: 50%;
+    }
+    span {
+      display: block;
+      color: $main-txt;
+    }
+  }
+  &_counter {
+    position: absolute;
+    margin-left: 7px;
+    font-size: 14px;
+    color: $main-txt;
+    border-top: 1px solid darken($main-bg, 25%);
+    margin-top: 5px;
+    line-height: 30px;
+    text-align: center;
+    &-txt {
+      display: none;
+      color: $main-txt;
+    }
+  }
+}
 
 
 @import "media";
