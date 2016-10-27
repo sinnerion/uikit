@@ -32,9 +32,19 @@ $(document).ready(function () {
     var currentScroll = $(this).scrollTop();
     if ($(window).width() < 768) {
       if (currentScroll > previousScroll) {
-        $('.main-sidebar_nav').css('top', '-160px');
+        $('.main-sidebar_nav').css('top', '-250px');
+        $('.main-sidebar_more').css({
+          'position': 'absolute',
+          'top': '0',
+          'line-height': '34px'
+      });
       } else {
         $('.main-sidebar_nav').css('top', '60px');
+        $('.main-sidebar_more').css({
+          'position': 'static',
+          'line-height': '60px'
+          // 'top': '70px'
+        });
       }
     } else {
       if (currentScroll > previousScroll) {
