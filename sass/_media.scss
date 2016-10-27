@@ -5,22 +5,18 @@
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
   .main-header {
-    .header-login_name {
-      font-size: 12px;
-    }
     .header-login_nav {
       font-size: 12px;
     }
     .header-nav {
-      width: 27%;
+      width: 40%;
+      a {
+        line-height: 20px;
+      }
     }
   }
   .main-sidebar {
     width: 100px;
-    &_more {
-      z-index: 50;
-      background: darken($main-bg, 10%);
-    }
     &_nav li {
       width: 100px;
       a {
@@ -46,6 +42,24 @@ and (max-device-width : 480px) {
     padding-left: 125px;
     p {
       font-size: 12px;
+    }
+  }
+}
+
+@media only screen
+and (max-device-width : 768px) {
+  .main-header {
+    .header-login_name {
+      font-size: 11px;
+    }
+  }
+  .main-header .header-login img {
+    margin-right: 5px;
+  }
+  .main-sidebar {
+    &_more {
+      z-index: 50;
+      background: darken($main-bg, 10%);
     }
   }
 }
