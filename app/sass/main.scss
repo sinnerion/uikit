@@ -1,3 +1,5 @@
+@import "../../node_modules/uikit/dist/scss/uikit-mixins";
+@import "../../node_modules/uikit/dist/scss/uikit";
 @import "vars";
 
 /* General */
@@ -197,3 +199,4 @@ body {
 }
 
 @import "media";
+@import "../../node_modules/uikit/dist/scss/components/autocomplete";
