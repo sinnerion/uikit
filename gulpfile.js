@@ -33,6 +33,9 @@ gulp.task('sass', function () {
 gulp.task('libs', function() {
   return gulp.src([
     'app/libs/jquery/dist/jquery.min.js',
+    'app/libs/uikit/js/uikit.min.js',
+    'app/libs/jquery-mousewheel/jquery.mousewheel.min.js',
+    'app/libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
   ])
       .pipe(concat('libs.min.js'))
       .pipe(gulp.dest('app/js'));

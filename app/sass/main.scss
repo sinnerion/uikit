@@ -8,6 +8,7 @@ body {
   position: relative;
   height: 100%;
   color: $main-txt;
+  background: $main-bg;
 }
 
 /* Header */
@@ -89,15 +90,26 @@ body {
 /* Content */
 .content {
   background: $main-bg;
-  margin-top: 70px;
   padding-top: 20px;
+  margin-top: 70px;
   &-block {
-    padding-left: 160px;
+    padding: 0 10px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    &_img,
+    &_text {
+      margin-bottom: 15px;
+    }
   }
 }
 
 /* Sidebar */
 .main-sidebar {
+  width: 50px;
+  margin-top: -20px;
   z-index: 20;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
@@ -105,15 +117,16 @@ body {
   -o-transition: all .3s;
   transition: all .3s;
   height: 100%;
-  position: fixed;
-  width: 50px;
-  top: 70px;
-  left: 0;
+  float: left;
+  //position: fixed;
+  //width: 50px;
+  //top: 70px;
+  //left: 0;
   background: darken($main-bg, 10%);
   &.active-sidebar {
-    width: 230px;
+    width: 165px;
     .main-sidebar_counter {
-      margin-left: 25px;
+      //margin-left: 25px;
     }
   }
   .uk-panel {
@@ -132,7 +145,7 @@ body {
     }
   }
   &_nav {
-    position: absolute;
+    // position: absolute;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     -ms-transition: all .3s;
@@ -149,10 +162,10 @@ body {
     -o-transition: width .3s;
     transition: width .3s;
     &.active-sidebar {
-      width: 230px;
+      width: 165px;
     }
     &:hover {
-      width: 230px;
+      width: 165px;
     }
   }
   &_nav > li > a {
@@ -183,8 +196,6 @@ body {
     }
   }
   &_counter {
-    position: absolute;
-    margin-left: 7px;
     font-size: 14px;
     color: $main-txt;
     border-top: 1px solid darken($main-bg, 25%);
@@ -194,6 +205,92 @@ body {
     &-txt {
       display: none;
       color: $main-txt;
+    }
+  }
+}
+
+/* Chat */
+.chat-btn {
+  z-index: 10;
+  position: fixed;
+  right: 0;
+  color: $main-txt;
+  text-transform: uppercase;
+  line-height: 40px;
+  top: 70px;
+  background: darken($main-bg, 15%);
+  &:hover,
+  &:active,
+  &:focus {
+    background: darken($main-bg, 10%);
+    color: lighten($main-txt, 5%);
+  }
+}
+.chat {
+  z-index: 25;
+  width: 0;
+  visibility: hidden;
+  margin-top: 70px;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: darken($main-bg, 20%);
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -ms-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+  &-content {
+    height: 70%;
+    p {
+      margin: 0 0 10px;
+    }
+    .mCSB_scrollTools .mCSB_dragger {
+      height: 30px !important;
+    }
+    .mCSB_scrollTools .mCSB_draggerContainer {
+      height: 80% !important;
+    }
+  }
+  &-form {
+    z-index: 50;
+    position: absolute;
+    background: darken($main-bg, 20%);
+    left: 0;
+    bottom: 100px;
+    box-sizing: border-box;
+    height: 25%;
+    padding: 15px;
+    width: 100%;
+    textarea {
+      width: 100%;
+      height: 100%;
+      background: lighten($main-bg, 10%);
+      outline: none;
+      border: 1px solid lighten($main-bg, 2%);;
+    }
+  }
+  &_close-btn {
+    z-index: 5;
+    position: absolute;
+    left: 0;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 40px;
+    top: 0;
+    background: darken($main-bg, 10%);
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    &:hover,
+    &:active,
+    &:focus {
+      background: darken($main-bg, 15%);
+      color: darken($main-txt, 5%);
     }
   }
 }

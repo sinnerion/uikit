@@ -8411,7 +8411,8 @@ html,
 body {
   position: relative;
   height: 100%;
-  color: #d0d0d0; }
+  color: #d0d0d0;
+  background: #5d5d5d; }
 
 /* Header */
 .main-header {
@@ -8476,26 +8477,27 @@ body {
 /* Content */
 .content {
   background: #5d5d5d;
-  margin-top: 70px;
-  padding-top: 20px; }
+  padding-top: 20px;
+  margin-top: 70px; }
   .content-block {
-    padding-left: 160px; }
+    padding: 0 10px;
+    -webkit-transition: all .3s;
+    transition: all .3s; }
+    .content-block_img, .content-block_text {
+      margin-bottom: 15px; }
 
 /* Sidebar */
 .main-sidebar {
+  width: 50px;
+  margin-top: -20px;
   z-index: 20;
   -webkit-transition: all .3s;
   transition: all .3s;
   height: 100%;
-  position: fixed;
-  width: 50px;
-  top: 70px;
-  left: 0;
+  float: left;
   background: #444444; }
   .main-sidebar.active-sidebar {
-    width: 230px; }
-    .main-sidebar.active-sidebar .main-sidebar_counter {
-      margin-left: 25px; }
+    width: 165px; }
   .main-sidebar .uk-panel {
     height: 100%; }
   .main-sidebar_more {
@@ -8507,7 +8509,6 @@ body {
       background: #3e3e3e;
       color: #d0d0d0; }
   .main-sidebar_nav {
-    position: absolute;
     -webkit-transition: all .3s;
     transition: all .3s; }
   .main-sidebar_nav > li {
@@ -8517,9 +8518,9 @@ body {
     -webkit-transition: width .3s;
     transition: width .3s; }
     .main-sidebar_nav > li.active-sidebar {
-      width: 230px; }
+      width: 165px; }
     .main-sidebar_nav > li:hover {
-      width: 230px; }
+      width: 165px; }
   .main-sidebar_nav > li > a {
     width: 230px;
     padding: 0;
@@ -8543,8 +8544,6 @@ body {
       display: block;
       color: #d0d0d0; }
   .main-sidebar_counter {
-    position: absolute;
-    margin-left: 7px;
     font-size: 14px;
     color: #d0d0d0;
     border-top: 1px solid #1d1d1d;
@@ -8555,6 +8554,73 @@ body {
       display: none;
       color: #d0d0d0; }
 
+/* Chat */
+.chat-btn {
+  z-index: 10;
+  position: fixed;
+  right: 0;
+  color: #d0d0d0;
+  text-transform: uppercase;
+  line-height: 40px;
+  top: 70px;
+  background: #373737; }
+  .chat-btn:hover, .chat-btn:active, .chat-btn:focus {
+    background: #444444;
+    color: #dddddd; }
+
+.chat {
+  z-index: 25;
+  width: 0;
+  visibility: hidden;
+  margin-top: 70px;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: #2a2a2a;
+  -webkit-transition: all .4s;
+  transition: all .4s; }
+  .chat-content {
+    height: 70%; }
+    .chat-content p {
+      margin: 0 0 10px; }
+    .chat-content .mCSB_scrollTools .mCSB_dragger {
+      height: 30px !important; }
+    .chat-content .mCSB_scrollTools .mCSB_draggerContainer {
+      height: 80% !important; }
+  .chat-form {
+    z-index: 50;
+    position: absolute;
+    background: #2a2a2a;
+    left: 0;
+    bottom: 100px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 25%;
+    padding: 15px;
+    width: 100%; }
+    .chat-form textarea {
+      width: 100%;
+      height: 100%;
+      background: #777777;
+      outline: none;
+      border: 1px solid #626262; }
+  .chat_close-btn {
+    z-index: 5;
+    position: absolute;
+    left: 0;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 40px;
+    top: 0;
+    background: #444444;
+    -webkit-transition: all .2s;
+    transition: all .2s; }
+    .chat_close-btn:hover, .chat_close-btn:active, .chat_close-btn:focus {
+      background: #373737;
+      color: #c3c3c3; }
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .main-header .header-login_nav {
@@ -8563,25 +8629,15 @@ body {
     width: 40%; }
     .main-header .header-nav a {
       line-height: 20px; }
-  .main-sidebar {
-    width: 100px; }
-    .main-sidebar_nav li {
-      width: 100px; }
-      .main-sidebar_nav li a .link-body {
-        padding-left: 25px; }
-        .main-sidebar_nav li a .link-body_description {
-          font-size: 14px;
-          font-weight: bold; }
-      .main-sidebar_nav li a img {
-        width: 50px;
-        height: 50px;
-        margin-right: 30px; }
-    .main-sidebar_counter {
-      margin-left: 33px; }
-  .content-block {
-    padding-left: 125px; }
-    .content-block p {
-      font-size: 12px; } }
+  .main-sidebar_nav li a .link-body_description {
+    font-size: 14px;
+    font-weight: bold; }
+  .content-block p {
+    font-size: 12px; } }
+
+@media only screen and (max-device-width: 768px) {
+  .chat-content p {
+    font-size: 12px; } }
 
 @media only screen and (max-device-width: 768px) {
   .main-header .header-login_name {
