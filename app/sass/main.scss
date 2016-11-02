@@ -90,10 +90,10 @@ body {
 /* Content */
 .content {
   background: $main-bg;
-  padding-top: 20px;
+  //padding-top: 20px;
   margin-top: 70px;
   &-block {
-    padding: 0 10px;
+    padding: 20px 10px 0;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     -ms-transition: all .3s;
@@ -109,7 +109,7 @@ body {
 /* Sidebar */
 .main-sidebar {
   width: 50px;
-  margin-top: -20px;
+  //margin-top: -20px;
   z-index: 20;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
@@ -117,7 +117,7 @@ body {
   -o-transition: all .3s;
   transition: all .3s;
   height: 100%;
-  float: left;
+  //float: left;
   //position: fixed;
   //width: 50px;
   //top: 70px;
@@ -230,12 +230,12 @@ body {
   z-index: 25;
   width: 0;
   visibility: hidden;
-  margin-top: 70px;
+  //margin-top: 70px;
   padding: 15px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100%;
+  position: relative;
+  //top: 0;
+  //right: 0;
+  //height: 100%;
   background: darken($main-bg, 20%);
   -webkit-transition: all .4s;
   -moz-transition: all .4s;
@@ -243,7 +243,7 @@ body {
   -o-transition: all .4s;
   transition: all .4s;
   &-content {
-    height: 70%;
+    height: 80%;
     p {
       margin: 0 0 10px;
     }
@@ -256,12 +256,12 @@ body {
   }
   &-form {
     z-index: 50;
-    position: absolute;
+    //position: absolute;
     background: darken($main-bg, 20%);
     left: 0;
     bottom: 100px;
     box-sizing: border-box;
-    height: 25%;
+    height: 20%;
     padding: 15px;
     width: 100%;
     textarea {

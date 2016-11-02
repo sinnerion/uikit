@@ -8477,10 +8477,9 @@ body {
 /* Content */
 .content {
   background: #5d5d5d;
-  padding-top: 20px;
   margin-top: 70px; }
   .content-block {
-    padding: 0 10px;
+    padding: 20px 10px 0;
     -webkit-transition: all .3s;
     transition: all .3s; }
     .content-block_img, .content-block_text {
@@ -8489,12 +8488,10 @@ body {
 /* Sidebar */
 .main-sidebar {
   width: 50px;
-  margin-top: -20px;
   z-index: 20;
   -webkit-transition: all .3s;
   transition: all .3s;
   height: 100%;
-  float: left;
   background: #444444; }
   .main-sidebar.active-sidebar {
     width: 165px; }
@@ -8572,17 +8569,13 @@ body {
   z-index: 25;
   width: 0;
   visibility: hidden;
-  margin-top: 70px;
   padding: 15px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100%;
+  position: relative;
   background: #2a2a2a;
   -webkit-transition: all .4s;
   transition: all .4s; }
   .chat-content {
-    height: 70%; }
+    height: 80%; }
     .chat-content p {
       margin: 0 0 10px; }
     .chat-content .mCSB_scrollTools .mCSB_dragger {
@@ -8591,13 +8584,12 @@ body {
       height: 80% !important; }
   .chat-form {
     z-index: 50;
-    position: absolute;
     background: #2a2a2a;
     left: 0;
     bottom: 100px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    height: 25%;
+    height: 20%;
     padding: 15px;
     width: 100%; }
     .chat-form textarea {
